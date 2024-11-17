@@ -11,7 +11,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
   const authHeader = req.headers.authorization;
 
   if (authHeader) {
-    const token = authHeader.split('')[1];
+    const token = authHeader.split(' ')[1];
 
     const secretKey = process.env.JWT_SECRET_KEY || '';
 
@@ -27,3 +27,10 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
     res.sendStatus(401); //401 is unathorized
   }
 };
+
+//implement userRouter as it's being imported above
+userRouter.get('/profile', authenticateToken, (req: Request, res: Response) => {
+  res.send(`Hey there, ${req.user?.username}`);
+})
+
+export default userRouter;
