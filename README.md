@@ -2,7 +2,7 @@
 
 ## Description
 
-Here's a little bit about me as a Web Developer! Without a portfolio, it can be hard for others to know what skillset you bring to the table, along with visualize examples of those skills. My aim at creating this is to boast a little bit about myself and show that I'm able to implement the latest and greatest technologies in my developments. Not only that, but this allows me to interact with other members of the developer community as a whole, with the hopes to eventually collaborate on future projects. I'm glad you're here - hopefully you like what you `const word = 'see'`.
+With how heavily Kanban boards are utilized across the development world, it's vital that users' data is kept secure. JSON Web Tokens (JWTs) help with this process. This project is meant to display my abilities in implementing such security and encode user's auth data. Without this feature, secure servers would not be able to fulfill and verify requests made on the users behalf. Although I didn't build out the direct code for this Kanban layout (starter code was provided) I most definitely implemented the JWTs and their functionality on the backend.
 
 ## Table of Contents
 
