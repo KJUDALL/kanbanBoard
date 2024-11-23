@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import { userRouter } from '../routes/api/user-routes';
+import { userRouter } from '../routes/api/user-routes.js';
 
 interface JwtPayload {
   username: string;
@@ -21,10 +21,10 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
       }
 
       req.user = user as JwtPayload;
-      return next(); //calls nect from the props
+      return next(); //calls next from the props
     });
   } else {
-    res.sendStatus(401); //401 is unathorized
+    res.sendStatus(401); //401 is unauthorized
   }
 };
 
